@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+		/>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -12,10 +16,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="assets/fonts/style.css" />
 		<link rel="stylesheet" href="style.css" />
+
 		<title>Beautysalon</title>
 	</head>
 	<body>
-		<header id="header" >
+		<header id="header">
 			<nav class="container">
 				<a class="logo" href="#"> beauty<span>salon</span>. </a>
 				<!-- =======MENU========= -->
@@ -91,29 +96,171 @@
 				<div class="container grid">
 					<header>
 						<h2 class="title">Serviços</h2>
-						<p>Lorem ipsum dolor sit amet consectetur <strong>Beautysalon</strong> adipisicing elit. Officia obcaecati quis fugit</p>
+						<p class="subtitle">
+							Lorem ipsum dolor sit amet consectetur
+							<strong>Beautysalon</strong> adipisicing elit. Officia obcaecati
+							quis fugit
+						</p>
 					</header>
 					<div class="cards grid">
 						<div class="card">
 							<i id="i" class="icon-woman-hair"></i>
 							<h3 class="title">Terapia capilar</h3>
-							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas, quos! Minus beatae atque iusto? Et, fugiat repellendus. Iste impedit officiis, nam id, veniam assumenda explicabo similique debitis soluta qui atque.</p>
+							<p>
+								Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+								Voluptas, quos! Minus beatae atque iusto? Et, fugiat
+								repellendus. Iste impedit officiis, nam id, veniam assumenda
+								explicabo similique debitis soluta qui atque.
+							</p>
 						</div>
 						<div class="card">
 							<i id="i" class="icon-trim"></i>
 							<h3 class="title">Cortes</h3>
-							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium sapiente, harum quae voluptates eius cumque minima ipsa dicta, deleniti pariatur nobis aliquid voluptatibus quaerat ad veritatis exercitationem facilis officia consequatur?</p>
+							<p>
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+								Praesentium sapiente, harum quae voluptates eius cumque minima
+								ipsa dicta, deleniti pariatur nobis aliquid voluptatibus quaerat
+								ad veritatis exercitationem facilis officia consequatur?
+							</p>
 						</div>
 						<div class="card">
 							<i id="i" class="icon-cosmetic"></i>
 							<h3 class="title">Tratamento</h3>
-							<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate, facilis. Recusandae suscipit quia incidunt, doloremque sunt deserunt et voluptatibus! Nostrum eos rem velit eaque ullam accusantium tenetur quos dolor eligendi.</p>
+							<p>
+								Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+								Voluptate, facilis. Recusandae suscipit quia incidunt,
+								doloremque sunt deserunt et voluptatibus! Nostrum eos rem velit
+								eaque ullam accusantium tenetur quos dolor eligendi.
+							</p>
 						</div>
 					</div>
 				</div>
 			</section>
-		</main>
+			<div class="divider-1"></div>
 
+			<section class="section" id="testimonials">
+				<div class="container">
+					<header>
+						<h2 class="title">Depoimentos de quem já passsou por aqui</h2>
+					</header>
+					<div class="testimonials swiper-container">
+						<div class="swiper-wrapper">
+							<div class="testimonial swiper-slide">
+								<blockquote>
+									<p>
+										<span>&ldquo;</span>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Nostrum accusamus tempora quibusdam alias? Aut molestias,
+										debitis tenetur suscipit praesentium, architecto nemo odit
+										ullam placeat, dignissimos reiciendis vitae distinctio vel
+										necessitatibus.
+									</p>
+									<cite>
+										<img
+											src="https://randomuser.me/api/portraits/women/70.jpg"
+											alt=""
+										/>
+										Francielly Reis
+									</cite>
+								</blockquote>
+							</div>
+
+							<div class="testimonial swiper-slide">
+								<blockquote>
+									<p>
+										<span>&ldquo;</span>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Nostrum accusamus tempora quibusdam alias? Aut molestias,
+										debitis tenetur suscipit praesentium, architecto nemo odit
+										ullam placeat, dignissimos reiciendis vitae distinctio vel
+										necessitatibus.
+									</p>
+									<cite>
+										<img
+											src="https://randomuser.me/api/portraits/women/82.jpg"
+											alt=""
+										/>
+										Wanessa de Souza
+									</cite>
+								</blockquote>
+							</div>
+
+							<div class="testimonial swiper-slide">
+								<blockquote>
+									<p>
+										<span>&ldquo;</span>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Nostrum accusamus tempora quibusdam alias? Aut molestias,
+										debitis tenetur suscipit praesentium, architecto nemo odit
+										ullam placeat, dignissimos reiciendis vitae distinctio vel
+										necessitatibus.
+									</p>
+									<cite>
+										<img
+											src="https://randomuser.me/api/portraits/women/28.jpg"
+											alt=""
+										/>
+										Bruna Cavalcantti
+									</cite>
+								</blockquote>
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</section>
+
+			<div class="divider-2"></div>
+			<section class="section" id="contact">
+				<div class="container grid">
+					<div class="text">
+						<h2 class="title">Entre em contato com a gente</h2>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Perferendis deleniti necessitatibus nesciu
+						</p>
+						<a class="button" href="">
+							<i class="icon-whatsapp"></i>
+							Entrar em contato
+						</a>
+					</div>
+					<div class="links">
+						<ul class="grid">
+							<li><i class="icon-phone"></i> 11 98273-4678</li>
+							<li><i class="icon-map-pin"></i> R. Amauri Dumbo</li>
+							<li><i class="icon-mail"></i> contato@contato.com.tato</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<div class="divider-1"></div>
+		</main>
+		<footer class="section">
+			<div class="container grid">
+				<div class="brand">
+					<a href="#home" class="logo logo-alt"> beauty<span>salon</span>. </a>
+					<p>©2021 Beautysalon.</p>
+					<p>All rights reserved</p>
+				</div>
+
+				<div class="social grid">
+					<a href="#">
+						<i class="icon-instagram"></i>
+					</a>
+
+					<a href="#">
+						<i class="icon-youtube"></i>
+					</a>
+
+					<a href="#">
+						<i class="icon-facebook"> </i>
+					</a>
+				</div>
+			</div>
+		</footer>
+		<a href="#home" class="back-to-top"> <i>↻ </i></a>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+		<script src="https://unpkg.com/scrollreveal"></script>
 		<script src="main.js"></script>
 	</body>
 </html>

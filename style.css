@@ -2,7 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	-webkit-fon-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 :root {
@@ -17,6 +17,10 @@
 	--text-color: hsl(0 0% 46%);
 	--text-color-light: hsl(0 0% 98%);
 	--body-color: hsl(0 0% 98%);
+	--title-font-size: 3rem;
+	--subtitle-font-size: 1.6rem;
+	--title-font: 'Poppins', sans-serif;
+	--body-font:'DM Sans', sans-serif;
 }
 ul {
 	list-style: none;
@@ -35,14 +39,12 @@ html {
 }
 
 body {
-	font-size: 1.6rem;
-	font-family: 'DM Sans', sans-serif;
-	font-weight: 400;
+	font: 400 1.6rem var(--body-font);
 	color: var(--text-color);
 	background: var(--body-color);
 }
 .title {
-	font: 700 3rem 'Poppins', sans-serif;
+	font: 700 var(--title-font-size) var(--title-font);
 	color: var(--title-color);
 }
 .button {
@@ -53,7 +55,7 @@ body {
 	align-items: center;
 	padding: 0 3.2rem;
 	border-radius: 0.4rem;
-	font: 500 1.6rem 'DM Sans', sans-serif;
+	font: 500 1.6rem var(--body-font);
 	transition: background 0.3s;
 }
 
@@ -93,6 +95,9 @@ body {
 .section .title {
 	margin-bottom: 1.6rem;
 }
+.section .subtitle {
+	font-size: var(--subtitle-font-size);
+}
 .section header {
 	margin-bottom: 6.4rem;
 }
@@ -115,16 +120,16 @@ body {
 	box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-main {
-	margin-top: calc(var(--header-height) + 3.2rem);
-}
 /* ==============LOGO=============== */
 .logo {
-	font: 700 2.1rem 'poppins', sans-serif;
+	font: 700 2.1rem var(--title-font);
 	color: var(--title-color);
 }
 .logo span {
 	color: var(--base-color);
+}
+.logo-alt span {
+	color: var(--body-color);
 }
 /* ==========NAVIGATION============= */
 nav {
@@ -292,4 +297,245 @@ nav.show div.icon-close {
 	margin-bottom: 2.4rem;
 	font-size: 8rem;
 	color: var(--base-color);
+}
+
+/* ==============TESTIMONIALS================== */
+#testimonials {
+	background: white;
+}
+#testimonials .container {
+	margin-left: 0;
+	margin-right: 0;
+}
+#testimonials header {
+	margin-left: 2.4rem;
+	margin-right: 2.4rem;
+	margin-bottom: 0;
+}
+
+#testimonials blockquote {
+	padding: 3.2rem;
+	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+	border-radius: 0.4rem;
+}
+#testimonials blockquote p {
+	position: relative;
+	text-indent: 3rem;
+	margin-bottom: 2.4rem;
+	color: var(--title-color);
+}
+
+#testimonials blockquote p span {
+	font: 700 4.8rem serif;
+	position: absolute;
+	top: -0.8rem;
+	left: -3rem;
+	color: var(--base-color);
+}
+
+#testimonials cite {
+	display: flex;
+	align-items: center;
+}
+#testimonials cite img {
+	width: 5rem;
+	height: 5rem;
+
+	border: 2px solid rgb(6, 232, 6);
+	border-radius: 50%;
+	object-fit: cover;
+	clip-path: circle();
+	margin-right: 0.8rem;
+}
+
+/* =========swiper=========== */
+.swiper-container {
+	position: relative;
+}
+.swiper-slide {
+	height: auto;
+	padding: 6.4rem 1.6rem;
+}
+.swiper-pagination-bullet-active {
+	background: var(--base-color);
+}
+
+/* ======================CONTACT================ */
+#contact .grid {
+	gap: 6.4rem;
+}
+#contact .text p {
+	margin-bottom: 3.2rem;
+}
+
+#contact .button i,
+#contact ul li i {
+	font-size: 2.4rem;
+	margin-right: 1rem;
+}
+
+#contact ul.grid {
+	gap: 3.2rem;
+}
+#contact ul li {
+	display: flex;
+	align-items: center;
+}
+#contact ul li i {
+	color: var(--base-color);
+}
+
+/* ============FOOTER================ */
+footer {
+	background-color: var(--base-color);
+}
+footer.section {
+	padding: 4rem 0;
+}
+footer .logo {
+	margin-bottom: 2.4rem;
+	display: inline-block;
+}
+
+footer .brand p {
+	color: var(--text-color-light);
+	margin-bottom: 1.2rem;
+}
+footer i {
+	font-size: 2.4rem;
+	color: var(--text-color-light);
+}
+footer .social {
+	grid-auto-flow: column;
+	width: fit-content;
+}
+footer .social a {
+	transition: 0.3s;
+	display: inline-block;
+}
+footer .social a:hover {
+	transform: translateY(-8px);
+}
+
+.back-to-top {
+	background: var(--base-color);
+	color: var(--text-color-light);
+	font-size: 3.2rem;
+	clip-path: circle();
+	padding: 1.6rem 1.6rem;
+	position: fixed;
+	right: 1.6rem;
+	bottom: 1.6rem;
+	line-height: 0;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.3s;
+	transform: translateY(100%);
+	transform: rotate3d();
+}
+.back-to-top.show {
+	visibility: visible;
+	opacity: 1;
+	transform: translateY(0);
+}
+/* =================MEDIA QUERIES============ */
+
+@media (min-width: 1200px) {
+	/* =====REUSABLE CLASSES===== */
+	.container{
+		max-width: 1120px;
+		margin-inline: auto;
+	}
+	.section {
+		padding: 16rem 0;
+	}	
+	.section header,
+	#testimonials header{
+		max-width:52.3rem ;
+		text-align: center;
+		margin-inline: auto;
+	}
+	.button{
+		height: 5rem;
+	}
+	nav .menu {
+		opacity: 1;
+		visibility: visible;
+		top: 0;
+	}
+	nav .menu ul{
+		display: flex;
+		gap: 2rem;
+	}
+	nav .menu ul li a.title{
+		font: 500 1.6rem var(--body-font);
+	}
+	nav .icon-menu{
+		display: none;
+	}
+		main {
+		margin-top: calc(var(--header-height) + 3.2rem);
+	}
+	/* home */
+	#home .container{
+		grid-auto-flow: column;
+		justify-content: space-between;
+    margin: 0 auto;
+	}
+	#home .image{
+		order: 1;
+	}
+	#home .text {
+		order: 0;
+		max-width: 39.6rem;
+		text-align: left;
+	}
+	/* ====ABOUT===== */
+#about .container{
+	grid-auto-flow: column;
+	margin: 0 auto;
+}
+/* =====SERVICES========= */
+.cards{
+ grid-template-columns: 1fr 1fr 1fr;
+}
+.card{
+	padding-inline: 4.8rem;
+}
+/* =====TESTIMONIALS========= */
+#testimonials .container{
+	margin-inline: auto;
+}
+/* ========CONTACT====== */
+#contact .container{
+	grid-auto-flow: column;
+	align-items: center;
+}
+#contact.text{
+	max-width: 40rem;
+}
+
+/* ========FOOTER======== */
+footer.section{
+	padding: 6.1rem 0;
+}
+footer .container{
+	grid-auto-flow: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+footer .logo{
+	font-size: 8.24rem;
+}
+
+
+
+}
+
+@media (min-width: 992px) {
+	:root {
+		--title-font-size: 3.6rem;
+		--subtitle-font-size: 1.8rem;
+	}
 }
