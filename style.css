@@ -147,11 +147,13 @@ nav ul li a {
 	position: relative;
 	transition: color 5s;
 }
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.active{
 	color: var(--base-color);
+	font-weight: bold;
 	transition: color 0.2s;
 }
-nav ul li a::after {
+nav ul li a::after{
 	content: '';
 	width: 0%;
 	height: 2px;
@@ -161,8 +163,10 @@ nav ul li a::after {
 	bottom: 0;
 	transition: width 0.2s;
 }
-nav ul li a:hover::after {
+nav ul li a:hover::after,
+nav ul li a.active::after {
 	width: 100%;
+	font-weight: bold;
 }
 nav .menu {
 	opacity: 0;
